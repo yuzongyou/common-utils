@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.myspringboot.commonspringboot</groupId>
+        <artifactId>commonspring-boot-bom</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>common-utils</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>common-utils</name>
+    <description>公</description>
+    <url>https://github.com/yuzongyou/common-utils</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>yuzongyou</name>
+            <email>yuzongyou3@163.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:https://github.com/yuzongyou/common-utils.git</connection>
+        <developerConnection>scm:https://github.com/yuzongyou/common-utils.git</developerConnection>
+        <url>https://github.com/yuzongyou/common-utils.git</url>
+    </scm>
+
+    <issueManagement>
+        <system>Git</system>
+        <url>https://github.com/yuzongyou/common-utils/issues</url>
+    </issueManagement>
+
+</project>
