@@ -3,20 +3,37 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.myspringboot.commonspringboot</groupId>
         <artifactId>commonspring-boot-bom</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.yygame.common</groupId>
     <artifactId>common-utils</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-
     <name>common-utils</name>
-    <description>公</description>
+    <description>公共组件</description>
     <url>https://github.com/yuzongyou/common-utils</url>
+    <properties>
+
+        <!-- 日志 -->
+        <common.exception.version>1.0.0-SNAPSHOT</common.exception.version>
+
+        <junit.version>4.12</junit.version>
+        <mockito.version>2.10.0</mockito.version>
+        <easymock.version>3.6</easymock.version>
+
+        <slf4j.version>1.7.25</slf4j.version>
+        <servlet.version>3.1.0</servlet.version>
+        <jackson.version>2.9.5</jackson.version>
+        <commons.lang3.version>3.7</commons.lang3.version>
+        <commons.codec.version>1.10</commons.codec.version>
+        <commons.collections.version>3.2.1</commons.collections.version>
+        <commons.text.version>1.3</commons.text.version>
+
+    </properties>
 
     <licenses>
         <license>
@@ -43,4 +60,89 @@
         <url>https://github.com/yuzongyou/common-utils/issues</url>
     </issueManagement>
 
+
+    <dependencies>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.easymock</groupId>
+            <artifactId>easymock</artifactId>
+            <version>${easymock.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons.codec.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${commons.collections.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.yygame.common</groupId>
+            <artifactId>common-exception</artifactId>
+            <version>${common.exception.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Jackson start -->
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- Jackson end -->
+
+        <!-- Servlet 容器相关 开始 -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Servlet 容器相关 结束 -->
+
+    </dependencies>
 </project>
