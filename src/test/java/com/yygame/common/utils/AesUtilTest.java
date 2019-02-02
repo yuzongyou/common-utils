@@ -1,10 +1,9 @@
 package com.yygame.common.utils;
 
-import com.duowan.common.utils.AesUtil;
 import org.junit.Test;
 
 /**
- * @author Arvin
+ * @author yzy
  */
 public class AesUtilTest {
 

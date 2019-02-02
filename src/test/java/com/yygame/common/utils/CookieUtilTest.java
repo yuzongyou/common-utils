@@ -1,6 +1,5 @@
 package com.yygame.common.utils;
 
-import com.duowan.common.utils.CookieUtil;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
@@ -15,7 +14,7 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 /**
- * @author Arvin
+ * @author yzy
  */
 public class CookieUtilTest {
 
@@ -25,12 +24,12 @@ public class CookieUtilTest {
     public void getCookie() throws Exception {
 
         Cookie[] cookies = new Cookie[]{
-                new Cookie("username", "arvin"),
+                new Cookie("username", "yzy"),
                 new Cookie("age", "26")
         };
         Mockito.when(request.getCookies()).thenReturn(cookies);
 
-        Assert.assertEquals("arvin", CookieUtil.getCookie(request, "username"));
+        Assert.assertEquals("yzy", CookieUtil.getCookie(request, "username"));
         assertEquals("26", CookieUtil.getCookie(request, "age"));
         assertEquals(null, CookieUtil.getCookie(request, "empty"));
 
@@ -39,26 +38,26 @@ public class CookieUtilTest {
     @Test
     public void getCookieNameValueMap() {
         Cookie[] cookies = new Cookie[]{
-                new Cookie("username", "arvin"),
+                new Cookie("username", "yzy"),
                 new Cookie("age", "26")
         };
         Mockito.when(request.getCookies()).thenReturn(cookies);
 
         Map<String, String> map = CookieUtil.getCookieNameValueMap(request);
-        assertEquals(map.get("username"), "arvin");
+        assertEquals(map.get("username"), "yzy");
         assertEquals(map.get("age"), "26");
     }
 
     @Test
     public void getCookieMap() {
         Cookie[] cookies = new Cookie[]{
-                new Cookie("username", "arvin"),
+                new Cookie("username", "yzy"),
                 new Cookie("age", "26")
         };
         Mockito.when(request.getCookies()).thenReturn(cookies);
         Map<String, Cookie> map = CookieUtil.getCookieMap(request);
 
-        assertEquals(map.get("username").getValue(), "arvin");
+        assertEquals(map.get("username").getValue(), "yzy");
         assertEquals(map.get("age").getValue(), "26");
     }
 
@@ -67,7 +66,7 @@ public class CookieUtilTest {
         HttpServletResponse response = Mockito.mock(HttpServletResponse.class);
         ArgumentCaptor<Cookie> cookieArgumentCaptor = ArgumentCaptor.forClass(Cookie.class);
 
-        CookieUtil.addHttpOnlyCookie("username", "arvin", -1, true, ".duowan.com", response);
+        CookieUtil.addHttpOnlyCookie("username", "yzy", -1, true, ".duowan.com", response);
 
         Mockito.verify(response).addCookie(cookieArgumentCaptor.capture());
 
@@ -83,14 +82,14 @@ public class CookieUtilTest {
         ArgumentCaptor<String> p3pHeaderNameArgumentCaptor = ArgumentCaptor.forClass(String.class);
         ArgumentCaptor<String> p3pHeaderValueArgumentCaptor = ArgumentCaptor.forClass(String.class);
 
-        CookieUtil.addCookie("username", "arvin", -1, true, true, ".duowan.com", response);
+        CookieUtil.addCookie("username", "yzy", -1, true, true, ".duowan.com", response);
 
         Mockito.verify(response).addCookie(cookieArgumentCaptor.capture());
         Mockito.verify(response).setHeader(p3pHeaderNameArgumentCaptor.capture(), p3pHeaderValueArgumentCaptor.capture());
 
         Cookie cookie = cookieArgumentCaptor.getValue();
         assertEquals("username", cookie.getName());
-        assertEquals("arvin", cookie.getValue());
+        assertEquals("yzy", cookie.getValue());
         assertEquals(-1, cookie.getMaxAge());
         assertEquals(true, cookie.isHttpOnly());
         assertEquals(".duowan.com", cookie.getDomain());

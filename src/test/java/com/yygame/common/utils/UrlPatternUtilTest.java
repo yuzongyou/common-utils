@@ -1,6 +1,5 @@
 package com.yygame.common.utils;
 
-import com.duowan.common.utils.UrlPatternUtil;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -9,7 +8,7 @@ import java.util.HashSet;
 import static org.junit.Assert.*;
 
 /**
- * @author Arvin
+ * @author yzy
  */
 public class UrlPatternUtilTest {
 

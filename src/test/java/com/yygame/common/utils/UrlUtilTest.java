@@ -1,6 +1,5 @@
 package com.yygame.common.utils;
 
-import com.duowan.common.utils.UrlUtil;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,7 +10,7 @@ import static org.junit.Assert.*;
 /**
  * 测试 Url 工具类
  *
- * @author Arvin
+ * @author yzy
  * @version 1.0
  * @since 2018/7/27 15:24
  */
