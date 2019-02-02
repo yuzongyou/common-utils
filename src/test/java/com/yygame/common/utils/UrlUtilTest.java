@@ -1,5 +1,7 @@
-package com.duowan.common.utils;
+package com.yygame.common.utils;
 
+import com.duowan.common.utils.UrlUtil;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Map;
@@ -17,7 +19,7 @@ public class UrlUtilTest {
     @Test
     public void adapterUrlProtocol() throws Exception {
 
-        assertEquals("http://www.baidu.com", UrlUtil.adapterUrlProtocol("http", "http://www.baidu.com"));
+        Assert.assertEquals("http://www.baidu.com", UrlUtil.adapterUrlProtocol("http", "http://www.baidu.com"));
         assertEquals("https://www.baidu.com", UrlUtil.adapterUrlProtocol("https", "http://www.baidu.com"));
 
         assertEquals("https://www.baidu.com", UrlUtil.adapterUrlProtocol("https", "https://www.baidu.com"));

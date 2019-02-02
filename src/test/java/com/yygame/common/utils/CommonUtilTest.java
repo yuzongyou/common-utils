@@ -1,5 +1,6 @@
-package com.duowan.common.utils;
+package com.yygame.common.utils;
 
+import com.duowan.common.utils.CommonUtil;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

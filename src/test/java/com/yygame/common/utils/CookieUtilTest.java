@@ -1,5 +1,7 @@
-package com.duowan.common.utils;
+package com.yygame.common.utils;
 
+import com.duowan.common.utils.CookieUtil;
+import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
@@ -28,7 +30,7 @@ public class CookieUtilTest {
         };
         Mockito.when(request.getCookies()).thenReturn(cookies);
 
-        assertEquals("arvin", CookieUtil.getCookie(request, "username"));
+        Assert.assertEquals("arvin", CookieUtil.getCookie(request, "username"));
         assertEquals("26", CookieUtil.getCookie(request, "age"));
         assertEquals(null, CookieUtil.getCookie(request, "empty"));
 

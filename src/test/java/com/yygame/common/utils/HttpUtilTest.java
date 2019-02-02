@@ -1,4 +1,4 @@
-package com.duowan.common.utils;
+package com.yygame.common.utils;
 
 import org.junit.Test;
 
