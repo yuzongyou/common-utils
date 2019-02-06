@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.yygame.common:common-exception:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yygame/common/common-exception/1.0.0-SNAPSHOT/common-exception-1.0.0-20190202.070002-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yygame/common/common-exception/1.0.0-SNAPSHOT/common-exception-1.0.0-20190202.070002-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/yygame/common/common-exception/1.0.0-SNAPSHOT/common-exception-1.0.0-20190202.070002-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
